@@ -21,9 +21,7 @@ export const getProducts = (products) => {
 export const deleteProductRequest = (id) => {
 	return (dispatch) => {
 		return callApi(`products/${id}`, 'DELETE', null).then(res => {
-			if (res.status === 200) {
-            	dispatch(deleteProduct(id));
-			}
+        	dispatch(deleteProduct(id));
         });
 	}
 }
